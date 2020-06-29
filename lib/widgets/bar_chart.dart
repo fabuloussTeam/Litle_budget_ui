@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class BarChart extends StatelessWidget {
 
@@ -18,7 +19,7 @@ class BarChart extends StatelessWidget {
 
     // TODO: implement build
     return Padding(
-      padding: EdgeInsets.all(15.0),
+      padding: EdgeInsets.all(12.0),
       child: Column(
         children: <Widget>[
           Text(
@@ -30,29 +31,34 @@ class BarChart extends StatelessWidget {
             ),
           ),
           SizedBox(height: 5.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.arrow_back),
-                iconSize: 30.0,
-                onPressed: (){},
-              ),
-              Text(
-                "Nov 10, 2019 - Nov 16, 2019",
-                style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 1.2
+
+          new SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.arrow_back),
+                  iconSize: 30.0,
+                  onPressed: (){},
                 ),
-              ),
-              IconButton(
-                icon: Icon(Icons.arrow_forward),
-                iconSize: 30.0,
-                onPressed: (){},
-              ),
-            ],
+                Text(
+                  "Nov 10, 2019 - Nov 16, 2019",
+                  style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.2
+                  ),
+                ),
+                IconButton(
+                  icon: Icon(Icons.arrow_forward),
+                  iconSize: 30.0,
+                  onPressed: (){},
+                ),
+              ],
+            ),
           ),
+
           SizedBox(height: 30.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
