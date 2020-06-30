@@ -28,7 +28,7 @@ _generateExpenses() {
 }
 
 List<Category> categories = [
-  Category(name: 'Food', maxAmount: 250, expenses: _generateExpenses()),
+  Category(name: 'Food', maxAmount: 100, expenses: _generateExpenses()),
   Category(name: 'Clothing', maxAmount: 500, expenses: _generateExpenses()),
   Category(name: 'Utilities', maxAmount: 600, expenses: _generateExpenses()),
   Category(
